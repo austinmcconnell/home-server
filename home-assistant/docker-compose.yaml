@@ -1,5 +1,5 @@
 ---
-version: "2.1"
+version: "3.8"
 services:
   homeassistant:
     image: lscr.io/linuxserver/homeassistant:2023.6.3
@@ -13,7 +13,9 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - ./config:/config
+      - home-assistant:/config
     # ports:
       # - 8123:8123 #optional. Use if not running in network_mode: host
     restart: unless-stopped
+volumes:
+  home-assistant:
