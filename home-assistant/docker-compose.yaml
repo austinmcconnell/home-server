@@ -2,7 +2,7 @@
 version: "3.8"
 services:
   homeassistant:
-    image: lscr.io/linuxserver/homeassistant:2023.9.3
+    image: lscr.io/linuxserver/homeassistant:2023.11.1
     pull_policy: missing
     container_name: homeassistant
     #Host vs. Bridge
