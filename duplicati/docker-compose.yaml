@@ -11,6 +11,8 @@ services:
       - TZ=US/Central
     volumes:
       - duplicati:/config
+      - backups:/backups
+      - source:/source
       - home-assistant_home-assistant:/source/volume1
       - portainer_portainer:/source/volume2
     ports:
@@ -18,6 +20,8 @@ services:
     restart: unless-stopped
 volumes:
   duplicati:
+  backups:
+  source:
   home-assistant_home-assistant:
     external: true
   portainer_portainer:
