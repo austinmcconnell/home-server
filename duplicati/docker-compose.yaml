@@ -10,7 +10,7 @@ services:
       - PGID=1000
       - TZ=US/Central
     volumes:
-      - duplicati:/config
+      - config:/config
       - backups:/backups
       - source:/source
       - home-assistant_home-assistant:/source/volume1
@@ -19,7 +19,7 @@ services:
       - 8200:8200
     restart: unless-stopped
 volumes:
-  duplicati:
+  config:
   backups:
   source:
   home-assistant_home-assistant:
