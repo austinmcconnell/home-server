@@ -13,7 +13,7 @@ services:
       - config:/config
       - backups:/backups
       - source:/source
-      - home-assistant_home-assistant:/source/volume1
+      - home-assistant_config:/source/volume1
       - portainer_portainer:/source/volume2
     ports:
       - 8200:8200
@@ -22,7 +22,7 @@ volumes:
   config:
   backups:
   source:
-  home-assistant_home-assistant:
+  home-assistant_config:
     external: true
   portainer_portainer:
     external: true

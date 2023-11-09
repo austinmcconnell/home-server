@@ -14,9 +14,9 @@ services:
       - PGID=1000
       - TZ=US/Central
     volumes:
-      - home-assistant:/config
+      - config:/config
     # ports:
       # - 8123:8123 #optional. Use if not running in network_mode: host
     restart: unless-stopped
 volumes:
-  home-assistant:
+  config:
