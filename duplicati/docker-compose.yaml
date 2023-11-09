@@ -14,7 +14,7 @@ services:
       - backups:/backups
       - source:/source
       - home-assistant_config:/source/volume1
-      - portainer_portainer:/source/volume2
+      - portainer_data:/source/volume2
     ports:
       - 8200:8200
     restart: unless-stopped
@@ -24,5 +24,5 @@ volumes:
   source:
   home-assistant_config:
     external: true
-  portainer_portainer:
+  portainer_data:
     external: true
