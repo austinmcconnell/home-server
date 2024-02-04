@@ -1,22 +1,17 @@
 ---
-version: "3.8"
+version: '3.8'
 services:
   homeassistant:
-    image: lscr.io/linuxserver/homeassistant:2023.11.1
-    pull_policy: missing
     container_name: homeassistant
-    #Host vs. Bridge
-    # Home Assistant can discover and automatically configure zeroconf/mDNS and UPnP
-    # devices on network. Must use network_mode: host for this functionality.
-    network_mode: host
+    image: lscr.io/linuxserver/homeassistant:2023.11.1
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=US/Central
     volumes:
       - config:/config
-    # ports:
-      # - 8123:8123 #optional. Use if not running in network_mode: host
+    network_mode: host
     restart: unless-stopped
+    pull_policy: missing
 volumes:
   config:
