@@ -6,11 +6,13 @@ Run Pi-hole image from [Docker Hub](https://hub.docker.com/r/pihole/pihole)
 
 One option is to set the `WEBPASSWORD` environment variable in a .env file.
 
-Another option is to let the container generate a password on startup. If you do that, run `docker logs pihole | grep random` to find the generated password.
+Another option is to let the container generate a password on startup. If you do that, run
+`docker logs pihole | grep random` to find the generated password.
 
 ## Upgrading
 
-According to the [Official upgrade documentation](https://github.com/pi-hole/docker-pi-hole?tab=readme-ov-file#upgrading--reconfiguring), do not run `pihole -up` or `pihole -r` to attempt to upgrade.
+According to the [Official upgrade documentation](https://github.com/pi-hole/docker-pi-hole?tab=readme-ov-file#upgrading--reconfiguring),
+do not run `pihole -up` or `pihole -r` to attempt to upgrade.
 
 Instead, first read the release notes. Then update the image tag and download the image
 
@@ -24,7 +26,9 @@ docker pull pihole
  docker compose up -d
  ```
 
-> :warning: When removing your pihole container, you may be stuck without DNS until the new container starts. Recommend always having a fallback DNS server configured in DHCP to avoid potential interruptions :warning:
+> :warning: When removing your pihole container, you may be stuck without DNS until the new
+> container starts. Recommend always having a fallback DNS server configured in DHCP to avoid
+> potential interruptions :warning:
 
 ## Admin UI
 
@@ -32,11 +36,14 @@ The admin UI can be found at <https://192.168.1.20/admin>
 
 ## DNS Blocklists
 
-Login to the admin UI. Click AdLists on the sidebar. Then manually add the following blocklists from [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists)
+Login to the admin UI. Click AdLists on the sidebar. Then manually add the following blocklists
+from [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists)
 
 - [Multi Pro](https://github.com/hagezi/dns-blocklists?tab=readme-ov-file#pro)
-  - Big broom - Cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking, Metrics, Telemetry, Phishing, Malware, Scam, Fake, Coins and other "Crap"
+  - Big broom - Cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking,
+  Metrics, Telemetry, Phishing, Malware, Scam, Fake, Coins and other "Crap"
 - [Threat Intelligence Feeds](https://github.com/hagezi/dns-blocklists?tab=readme-ov-file#tif)
-  - A blocklist for blocking malware, cryptojacking, scam, spam and phishing. Blocks domains known to spread malware, launch phishing attacks and host command-and-control servers.
+  - A blocklist for blocking malware, cryptojacking, scam, spam and phishing. Blocks domains known
+  to spread malware, launch phishing attacks and host command-and-control servers.
 - [Anti Piracy](https://github.com/hagezi/dns-blocklists?tab=readme-ov-file#piracy)
   - Blocks websites and services that are mainly used for illegal distribution of copyrighted content

@@ -34,7 +34,9 @@ cp -rpT config/. config-new/
 cp -rp config/* config-new
 ```
 
-The default globbing in bash does not include filenames starting with a `.` (e.g. `.cloud` and `.storage` dirs, and `.HA_VERSION`). So with `*`, you are asking to copy all files recursively from this directory that can be expanded using `*`.
+The default globbing in bash does not include filenames starting with a `.` (e.g. `.cloud` and
+`.storage` dirs, and `.HA_VERSION`). So with `*`, you are asking to copy all files recursively
+from this directory that can be expanded using `*`.
 
 ## Update Version
 
