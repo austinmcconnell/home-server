@@ -16,3 +16,11 @@ repos:
     hooks:
       - id: markdownlint
         args: [--config, .mdlrc]
+  - repo: local
+    hooks:
+    -   id: sort-docker-compose
+        name: Sort Docker Compose files
+        entry: python sort-docker-compose.py
+        language: system
+        types: [yaml]
+        files: docker-compose.(yaml|yml)$
