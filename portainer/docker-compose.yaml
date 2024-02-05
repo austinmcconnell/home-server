@@ -13,8 +13,13 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - data:/data
+    networks:
+      - portainer
     restart: unless-stopped
     pull_policy: missing
 volumes:
   data:
   portainer:
+networks:
+  portainer:
+    name: portainer

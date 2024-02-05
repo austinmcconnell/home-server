@@ -18,6 +18,8 @@ services:
       - portainer_data:/source/volume2
       - pi-hole_pihole:/source/volume3
       - pi-hole_dnsmasq:/source/volume4
+    networks:
+      - duplicati
     restart: unless-stopped
     pull_policy: missing
 volumes:
@@ -32,3 +34,6 @@ volumes:
   portainer_data:
     external: true
   source:
+networks:
+  duplicati:
+    name: duplicati
