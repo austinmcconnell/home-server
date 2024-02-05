@@ -47,3 +47,15 @@ from [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists)
   to spread malware, launch phishing attacks and host command-and-control servers.
 - [Anti Piracy](https://github.com/hagezi/dns-blocklists?tab=readme-ov-file#piracy)
   - Blocks websites and services that are mainly used for illegal distribution of copyrighted content
+
+## Hostnames In Dashboard
+
+If you are not using pihole as a DHCP server, you'll only see the IP addresses of clients in
+dashboards and lists.
+
+If you want to see the hostnames of clients, go to Settings --> DNS --> Conditional forwarding
+and set `Local network in CIDR notation` and `IP address of your DHCP server (router)`.
+
+Example
+
+![dns conditional forwarding example](/img/pihole-dns-conditional-forwarding.png)
