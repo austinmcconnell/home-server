@@ -1,0 +1,18 @@
+{
+  "validation": {
+    "use_pre_commit": true,
+    "guidance_document": ".amazonq/pre-commit-guidance.md"
+  },
+  "code_generation": {
+    "follow_conventions": true,
+    "docker": {
+      "volume_naming": "^{service_name}_{purpose}$"
+    }
+  },
+  "documentation": {
+    "markdown": {
+      "follow_linting_rules": true,
+      "line_length": 100
+    }
+  }
+}

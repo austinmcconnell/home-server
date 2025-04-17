@@ -1,0 +1,16 @@
+{
+  "docker": {
+    "volume_naming": {
+      "pattern": "^{service_name}_{purpose}$",
+      "description": "All Docker volumes must follow the naming convention of service_name_purpose",
+      "examples": [
+        "duplicati_backups",
+        "home-assistant_config",
+        "pi-hole_dnsmasq"
+      ]
+    },
+    "service_organization": {
+      "description": "Each service must have its own directory with a dedicated docker-compose.yaml file"
+    }
+  }
+}
