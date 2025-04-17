@@ -2,6 +2,22 @@
 
 This repository contains Docker Compose configurations for running various services on a home server.
 
+## Deployment
+
+This configuration is designed to be platform-agnostic and can be deployed on any system running Docker.
+
+### Current Deployment
+
+These services are currently running on a Synology NAS. To manage the services from a development machine:
+
+```bash
+# Set the Docker context to the remote host
+docker context use hoid-is-my-hero
+
+# Now docker compose commands will execute on the remote host
+docker compose up -d
+```
+
 ## Docker Configuration
 
 ### Structure
