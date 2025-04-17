@@ -1,1 +1,1 @@
-/Users/austin/projects/scripts/sort-docker-compose.py
+/Users/austin/projects/scripts/sort_docker_compose.py
