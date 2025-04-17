@@ -20,7 +20,9 @@ services:
     restart: unless-stopped
 volumes:
   dnsmasq:
+    name: pi-hole_dnsmasq
   pihole:
+    name: pi-hole_pihole
 networks:
   macvlan:
     driver: macvlan

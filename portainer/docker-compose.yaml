@@ -19,7 +19,9 @@ services:
     pull_policy: missing
 volumes:
   data:
+    name: portainer_data
   portainer:
+    name: portainer_portainer
 networks:
   portainer:
     name: portainer

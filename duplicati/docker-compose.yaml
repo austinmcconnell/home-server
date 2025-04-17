@@ -24,7 +24,9 @@ services:
     pull_policy: missing
 volumes:
   backups:
+    name: duplicati_backups
   config:
+    name: duplicati_config
   home-assistant_config:
     external: true
   pi-hole_dnsmasq:
@@ -34,6 +36,7 @@ volumes:
   portainer_data:
     external: true
   source:
+    name: duplicati_source
 networks:
   duplicati:
     name: duplicati
