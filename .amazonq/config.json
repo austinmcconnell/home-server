@@ -14,5 +14,14 @@
       "follow_linting_rules": true,
       "line_length": 100
     }
-  }
+  },
+  "project_guidelines": {
+    "architecture_document": ".amazonq/architecture.md",
+    "rules_document": ".amazonq/rules.json"
+  },
+  "context_files": [
+    ".amazonq/pre-commit-guidance.md",
+    ".amazonq/architecture.md",
+    ".amazonq/rules.json"
+  ]
 }
