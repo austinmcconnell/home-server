@@ -10,6 +10,19 @@ pre-commit checks before finalizing.
 1. Fix any issues identified by the checks
 1. Verify the fixed content passes all checks
 
+## Example Validation Commands
+
+```bash
+# Validate all files
+pre-commit run --all-files
+
+# Validate specific files
+pre-commit run --files path/to/file
+
+# Run specific hooks
+pre-commit run markdownlint --files path/to/markdown/file.md
+```
+
 ## Common Checks
 
 ### Markdown
@@ -29,12 +42,9 @@ pre-commit checks before finalizing.
 
 - JSON files must be valid and properly formatted with 4-space indentation
 
-## Example Validation Command
+## Documentation Updates
 
-```bash
-# Validate a specific file
-pre-commit run --files path/to/file
-
-# Run specific hooks
-pre-commit run markdownlint --files path/to/markdown/file.md
-```
+If during validation of generated content (steps 2 and 3 of `Validation Process`) other common
+checks are found which are not listed in this document, add them to the `Common Checks`
+section of this document. This will help improve the initially generated content of future chat
+sessions and reduce the need for multiple cycles of generate, validate, fix, etc.
