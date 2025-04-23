@@ -1,14 +1,10 @@
 ---
-# Master docker-compose file for home-server
-# This file uses the 'include' directive to combine all service definitions
-
 include:
   - path: ./duplicati/docker-compose.yaml
   - path: ./portainer/docker-compose.yaml
   - path: ./pi-hole/docker-compose.yaml
   - path: ./home-assistant/docker-compose.yaml
-
-# Define any global networks that should be shared across services
+  - path: ./plex/docker-compose.yaml
 networks:
   home-server:
     name: home-server
