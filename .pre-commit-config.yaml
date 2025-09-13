@@ -17,6 +17,8 @@ repos:
     hooks:
       - id: markdownlint
         args: [--config, .mdlrc]
+        language: ruby
+        additional_dependencies: [mdl]
   - repo: local
     hooks:
     -   id: sort-docker-compose
