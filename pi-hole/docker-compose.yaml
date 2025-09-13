@@ -1,5 +1,4 @@
 ---
-version: '3'
 services:
   pihole:
     container_name: pihole
@@ -25,6 +24,7 @@ volumes:
     name: pi-hole_pihole
 networks:
   macvlan:
+    name: pihole
     driver: macvlan
     driver_opts:
       parent: eth0
@@ -33,4 +33,3 @@ networks:
         - gateway: 192.168.1.1
           ip_range: 192.168.1.20/32
           subnet: 192.168.1.0/24
-    name: pihole
