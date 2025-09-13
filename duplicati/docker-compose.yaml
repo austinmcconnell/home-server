@@ -17,6 +17,7 @@ services:
       - portainer_data:/source/volume2
       - pi-hole_pihole:/source/volume3
       - pi-hole_dnsmasq:/source/volume4
+      - jellyfin_config:/source/volume5
     networks:
       - duplicati
     restart: unless-stopped
@@ -27,6 +28,8 @@ volumes:
   config:
     name: duplicati_config
   home-assistant_config:
+    external: true
+  jellyfin_config:
     external: true
   pi-hole_dnsmasq:
     external: true

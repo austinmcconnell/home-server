@@ -20,7 +20,11 @@ home-server/
 │   └── docker-compose.yaml
 ├── home-assistant/           # Home automation platform
 │   └── docker-compose.yaml
+├── jellyfin/                 # Media server
+│   └── docker-compose.yaml
 ├── pi-hole/                  # Network-wide ad blocking
+│   └── docker-compose.yaml
+├── plex/                     # Media server (alternative)
 │   └── docker-compose.yaml
 ├── portainer/                # Container management
 │   └── docker-compose.yaml
@@ -35,6 +39,7 @@ home-server/
 Duplicati backs up volumes from other services:
 
 - home-assistant_config
+- jellyfin_config
 - pi-hole_dnsmasq
 - pi-hole_pihole
 - portainer_data
