@@ -25,8 +25,7 @@ docker compose up -d
 The repository is organized with a modular approach:
 
 - Each service has its own directory containing a dedicated `docker-compose.yaml` file
-- A master `docker-compose.yaml` file in the root directory uses the `include` directive to
-  combine all services
+- Services can be managed individually or in groups as needed
 
 ### Services
 
@@ -57,13 +56,15 @@ cd duplicati
 docker compose up -d
 ```
 
-#### Running All Services
+#### Running Multiple Services
 
-To manage all services at once, use the master docker-compose file:
+To manage multiple services, you can use shell commands:
 
 ```bash
-# From the repository root
-docker compose up -d
+# Start all services
+for service in duplicati portainer pi-hole home-assistant plex; do
+  cd $service && docker compose up -d && cd ..
+done
 ```
 
 ### Dependencies
@@ -76,4 +77,4 @@ Services have dependencies on each other's volumes. For example:
 ### Requirements
 
 - Docker Engine 20.10.0+
-- Docker Compose v2.20.0+ (for the `include` directive)
+- Docker Compose v2.0.0+

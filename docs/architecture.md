@@ -16,7 +16,6 @@ Docker-capable system, currently deployed on a Synology NAS.
 
 ```text
 home-server/
-├── docker-compose.yaml       # Master compose file with includes
 ├── duplicati/                # Backup service
 │   └── docker-compose.yaml
 ├── home-assistant/           # Home automation platform
