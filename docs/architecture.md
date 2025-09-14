@@ -38,7 +38,6 @@ Duplicati backs up volumes from other services:
 - pi-hole_dnsmasq
 - pi-hole_pihole
 - portainer_data
-- portainer_portainer
 
 ## Networking
 
