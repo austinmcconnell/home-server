@@ -11,8 +11,8 @@ services:
       - VERSION=docker
     volumes:
       - /volume1/docker/plex:/config
-      - /volume1/plex/movies:/movies
-      - /volume1/plex/tv:/tv
+      - /volume1/media/movies:/movies
+      - /volume1/media/tv:/tv
     network_mode: host
     restart: unless-stopped
     pull_policy: missing
